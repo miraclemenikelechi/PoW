@@ -10,7 +10,7 @@ export default function Component() {
 }
 
 function Title() {
-    return <h1 className={`text-3xl font-bold`}>Hi, I'm Miracle</h1>;
+    return <h1 className={`text-3xl font-bold`}>Hi, I&apos;m Miracle</h1>;
 }
 
 function BriefAbout() {

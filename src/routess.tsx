@@ -1,8 +1,8 @@
 import { Navigate, RouteObject } from "react-router";
 
 import { BaseLayout } from "./components/layout/base";
-import Home from "./routes/home";
-import { Skills } from "./routes/skills";
+import Home from "./routes/_home/route";
+import { Skills } from "./routes/skills/route";
 
 export const routes: Array<RouteObject> = [
     {

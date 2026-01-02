@@ -3,11 +3,11 @@ import { cn } from "@/lib/utils";
 // import { iLink } from "@/types";
 
 export default function DesktopNavbar() {
-    const contactLinks: iLink[] = [
-        { href: "https://www.x.com/trinityandtruth", title: "X" },
-        { href: "https://www.linkedin.com/in/miraclemenikelechi/", title: "LinkedIn" },
-        { href: "https://www.codepen.io/miraclemenikelechi", title: "CodePen" },
-    ];
+    // const contactLinks: iLink[] = [
+    //     { href: "https://www.x.com/trinityandtruth", title: "X" },
+    //     { href: "https://www.linkedin.com/in/miraclemenikelechi/", title: "LinkedIn" },
+    //     { href: "https://www.codepen.io/miraclemenikelechi", title: "CodePen" },
+    // ];
 
     return (
         <header

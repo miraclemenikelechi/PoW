@@ -57,7 +57,7 @@ export function Navbar() {
                         >
                             <div
                                 className={cn(
-                                    "flex size-[90%] flex-col items-end space-y-6 rounded bg-rose-400/2.5 p-5",
+                                    "flex size-[90%] flex-col items-end space-y-6 rounded-xl bg-rose-400/4 p-5",
                                 )}
                             >
                                 {NAVIGATION_LINKS.map(({ title, href }, index) => (

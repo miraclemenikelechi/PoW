@@ -1,14 +1,14 @@
 import "./assets/styles/index.css";
 import "./assets/styles/index.scss";
 
-// import { createBrowserRouter, RouterProvider } from "react-router";
 import { createRouter, RouterProvider } from "@tanstack/react-router";
 import React from "react";
 import ReactDOM from "react-dom/client";
-// import { routeTree } from "./routeTree.gen";
+
+import { routeTree } from "./routeTree.gen";
 
 const router = createRouter({
-    // routeTree,
+    routeTree,
     defaultPreload: "intent",
     scrollRestoration: true,
 });
@@ -21,6 +21,6 @@ declare module "@tanstack/react-router" {
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
     <React.StrictMode>
-        (<RouterProvider router={router} />
+        <RouterProvider router={router} />
     </React.StrictMode>,
 );

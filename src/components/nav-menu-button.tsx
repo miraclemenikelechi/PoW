@@ -18,7 +18,7 @@ export function MenuButton({ isOpen, onToggle }: MenuButtonProps) {
                 id={`nav-menu-button`}
             >
                 <span className={`flex size-10 items-center justify-center`}>
-                    <i>{isOpen ? <X /> : <AlignRight />}</i>
+                    <i className="text-white">{isOpen ? <X /> : <AlignRight />}</i>
                 </span>
             </button>
         </section>
