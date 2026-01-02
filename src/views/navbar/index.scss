@@ -1,0 +1,8 @@
+@use "@/assets/styles/index.scss" as *;
+
+.navigation-bar-menu {
+    height: calc(100svh - 8.125rem);
+    backdrop-filter: blur(0.25rem);
+
+    @include flex();
+}

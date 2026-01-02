@@ -1,0 +1,37 @@
+@use "../index.scss" as *;
+
+$element: nav-menu-button;
+
+##{$element} {
+    --duration: 150ms;
+
+    overflow: hidden;
+    @include flex;
+
+    &::before {
+        content: "";
+        position: absolute;
+        transition-property: top, border;
+        transition-duration: var(--duration);
+        transition-timing-function: ease-out;
+        background: rgba($color: #5f002f, $alpha: 0.25);
+        @include equal(100%);
+    }
+
+    &.#{$element}--close::before {
+        top: calc(100% - 0.0625rem);
+    }
+
+    &.#{$element}--open::before {
+        top: 0;
+        border-radius: 0.25rem;
+    }
+
+    i > svg {
+        animation-name: bounceIn;
+        animation-duration: var(--duration);
+        animation-iteration-count: 1;
+        animation-timing-function: ease-in-out;
+        z-index: 5;
+    }
+}

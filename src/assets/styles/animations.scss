@@ -1,0 +1,70 @@
+@keyframes bounceIn {
+    from {
+        opacity: 0;
+        scale: 0.5;
+    }
+
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+@keyframes flicker {
+    // 0%,
+    // 18%,
+    // 22%,
+    // 25%,
+    // 53%,
+    // 57%,
+    // 100% {
+    //     opacity: 1;
+    // }
+    // 20%,
+    // 24%,
+    // 55% {
+    //     opacity: 0.3;
+    // }
+
+    // 0%,
+    // 18%,
+    // 20%,
+    // 100% {
+    //     opacity: 0.99;
+    //     text-shadow:
+    //         0 0 10px #fff,
+    //         0 0 20px #fff,
+    //         0 0 30px #ff00de,
+    //         0 0 40px #ff00de,
+    //         0 0 50px #ff00de; /* your full glow */
+    // }
+    // 19%,
+    // 19.9% {
+    //     opacity: 0.5;
+    //     text-shadow: none; /* or weaker: 0 0 5px #ff00de */
+    // }
+
+    0% {
+        opacity: 0;
+        text-shadow: none;
+    }
+    10%,
+    20% {
+        opacity: 0.3;
+        text-shadow: none;
+    }
+    15%,
+    18% {
+        opacity: 0.8;
+        text-shadow: 0 0 10px #ff00de;
+    }
+    30%,
+    100% {
+        opacity: 0.99;
+        text-shadow:
+            0 0 10px #fff,
+            0 0 20px #fff,
+            0 0 30px #ff00de,
+            0 0 40px #ff00de;
+    }
+}

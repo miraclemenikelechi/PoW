@@ -1,0 +1,15 @@
+@use "../index.scss" as *;
+
+$element: showcase;
+
+##{$element} {
+    display: grid;
+
+    &.#{$element}--mobile {
+        grid-template-columns: 1fr;
+    }
+
+    &.#{$element}--desktop {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

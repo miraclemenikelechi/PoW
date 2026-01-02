@@ -1,0 +1,16 @@
+@use "sass:map";
+@use "../index.scss" as *;
+
+$element: project-reel;
+
+##{$element} {
+    box-shadow: 0rem 0rem 0.25rem 0.125rem rgba($color: map.get($map: $colors, $key: purple--100), $alpha: 7.5%);
+
+    > section {
+        &:last-of-type {
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+            border-top-width: 0.0625rem;
+        }
+    }
+}
