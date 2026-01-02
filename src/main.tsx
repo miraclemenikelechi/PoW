@@ -1,10 +1,10 @@
 import "./assets/styles/index.css";
 import "./assets/styles/index.scss";
 
+// import { createBrowserRouter, RouterProvider } from "react-router";
+import { createRouter, RouterProvider } from "@tanstack/react-router";
 import React from "react";
 import ReactDOM from "react-dom/client";
-// import { createBrowserRouter, RouterProvider } from "react-router";
-import { RouterProvider, createRouter } from "@tanstack/react-router";
 // import { routeTree } from "./routeTree.gen";
 
 const router = createRouter({
