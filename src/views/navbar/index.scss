@@ -13,7 +13,21 @@
     }
 
     &-link {
-        // @include debug(light);
+        position: relative;
+
+        &::after {
+            content: "";
+
+            border-block: 0.0625rem dotted var(--color-pink-200);
+            bottom: 15%;
+            left: 47.5%;
+            opacity: 1;
+            pointer-events: none;
+            position: absolute;
+            transform: translateX(-50%);
+            transition-duration: var(--duration);
+            transition-timing-function: ease-in-out;
+        }
 
         &:hover {
             span::before,
@@ -28,15 +42,24 @@
             span::before {
                 right: 95%;
             }
+
+            &::after {
+                bottom: 22.5%;
+                width: 110%;
+                opacity: 1;
+            }
         }
 
         span {
             position: relative;
+            pointer-events: none;
             @include flex;
 
             &::after,
             &::before {
                 position: absolute;
+                transition-duration: var(--duration);
+                transition-timing-function: ease-in-out;
 
                 @include font($f: "doto", $s: "3xl", $w: "semibold");
             }
