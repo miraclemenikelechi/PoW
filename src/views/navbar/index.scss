@@ -1,8 +1,20 @@
 @use "@/assets/styles/index.scss" as *;
 
-.navigation-bar-menu {
-    height: calc(100svh - 8.125rem);
-    backdrop-filter: blur(0.25rem);
+.navigation-bar {
+    &-menu {
+        height: calc(100svh - 8.125rem);
+        backdrop-filter: blur(0.25rem);
 
-    @include flex();
+        @include flex();
+
+        > div {
+            background-color: var(--pink--200);
+        }
+    }
+
+    &-link {
+        &:hover {
+            letter-spacing: 0.5px;
+        }
+    }
 }

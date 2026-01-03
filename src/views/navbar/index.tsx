@@ -26,10 +26,18 @@ export function Navbar() {
             >
                 <RenderUsername />
 
-                <aside className={cn("hidden space-x-3", "lg:block")}>
+                <aside className={cn("hidden space-x-6", "lg:block")}>
                     {NAVIGATION_LINKS.map(function ({ title, href }, index) {
                         return (
-                            <a href={href} key={index} rel="noreferrer">
+                            <a
+                                href={href}
+                                key={index}
+                                rel="noreferrer"
+                                className={cn(
+                                    "text-xl text-white transition hover:text-pink-200",
+                                    "navigation-bar-link",
+                                )}
+                            >
                                 [{title}]
                             </a>
                         );
@@ -55,11 +63,7 @@ export function Navbar() {
                             exit={{ scale: 1, opacity: 0 }}
                             className={cn("absolute size-full rounded bg-black/60", "navigation-bar-menu")}
                         >
-                            <div
-                                className={cn(
-                                    "flex size-[90%] flex-col items-end space-y-6 rounded-xl bg-rose-400/4 p-5",
-                                )}
-                            >
+                            <div className={cn("flex size-[90%] flex-col items-end space-y-6 rounded-xl p-5")}>
                                 {NAVIGATION_LINKS.map(({ title, href }, index) => (
                                     <motion.a
                                         key={title}

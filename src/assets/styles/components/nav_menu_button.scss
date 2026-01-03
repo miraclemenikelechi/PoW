@@ -3,8 +3,6 @@
 $element: nav-menu-button;
 
 ##{$element} {
-    --duration: 150ms;
-
     overflow: hidden;
     @include flex;
 
@@ -14,7 +12,7 @@ $element: nav-menu-button;
         transition-property: top, border;
         transition-duration: var(--duration);
         transition-timing-function: ease-out;
-        background: rgba($color: #5f002f, $alpha: 0.25);
+        background: var(--pink--200);
         @include equal(100%);
     }
 

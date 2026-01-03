@@ -19,6 +19,10 @@ $colors: (
             $color: #fff1f2,
             $alpha: 100%,
         ),
+    "pink--200": rgba(
+            $color: #5f002f,
+            $alpha: 15%,
+        ),
 );
 
 $desktop: (
@@ -27,7 +31,8 @@ $desktop: (
 
 :root {
     @include generate-css-variables($map: $colors);
-    @include generate-css-variables($map: $desktop, $prefix: desktop);
+    // @include generate-css-variables($map: $desktop, $prefix: desktop);
+    @include generate-css-variables($map: $desktop);
 
     --none: linear(0, 1);
     --power1-in: linear(
