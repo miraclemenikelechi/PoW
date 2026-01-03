@@ -13,8 +13,43 @@
     }
 
     &-link {
+        // @include debug(light);
+
         &:hover {
-            letter-spacing: 0.5px;
+            span::before,
+            span::after {
+                @include font($f: "doto", $s: "2xl", $w: "semibold");
+            }
+
+            span::after {
+                left: 95%;
+            }
+
+            span::before {
+                right: 95%;
+            }
+        }
+
+        span {
+            position: relative;
+            @include flex;
+
+            &::after,
+            &::before {
+                position: absolute;
+
+                @include font($f: "doto", $s: "3xl", $w: "semibold");
+            }
+
+            &::after {
+                content: "]";
+                left: 100%;
+            }
+
+            &::before {
+                content: "[";
+                right: 100%;
+            }
         }
     }
 }

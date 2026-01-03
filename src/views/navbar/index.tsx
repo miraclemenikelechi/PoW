@@ -26,7 +26,7 @@ export function Navbar() {
             >
                 <RenderUsername />
 
-                <aside className={cn("hidden space-x-6", "lg:block")}>
+                <aside className={cn("hidden space-x-6", "lg:flex gap-6")}>
                     {NAVIGATION_LINKS.map(function ({ title, href }, index) {
                         return (
                             <a
@@ -38,7 +38,9 @@ export function Navbar() {
                                     "navigation-bar-link",
                                 )}
                             >
-                                [{title}]
+                                {/* [{title}] */}
+
+                                <span>{title}</span>
                             </a>
                         );
                     })}
@@ -74,7 +76,9 @@ export function Navbar() {
                                         transition={{ delay: 0.05 + index * 0.1 }}
                                         className="font-doto text-left text-4xl font-light tracking-wider text-white transition hover:text-pink-200"
                                     >
-                                        [{title}]
+                                        {/* [{title}] */}
+
+                                        <span>{title}</span>
                                     </motion.a>
                                 ))}
                             </div>
