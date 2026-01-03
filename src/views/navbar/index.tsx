@@ -7,6 +7,7 @@ import { RenderUsername } from "@/components/nav-bar-username";
 import { MenuButton } from "@/components/nav-menu-button";
 import { cn } from "@/lib/utils";
 
+import { Link } from "@tanstack/react-router";
 import { NAVIGATION_LINKS } from "./constants";
 import { NavbarSkeleton } from "./skeleton";
 
@@ -26,20 +27,19 @@ export function Navbar() {
             >
                 <RenderUsername />
 
-                <aside className={cn("hidden", "gap-10 lg:flex")}>
+                <aside className={cn("hidden gap-10", "lg:flex")}>
                     {NAVIGATION_LINKS.map(function ({ title, href }, index) {
                         return (
-                            <a
-                                href={href}
+                            <Link
+                                to={href}
                                 key={index}
-                                rel="noreferrer"
                                 className={cn(
                                     "text-xl text-white transition-all duration-150 hover:text-pink-200",
                                     "navigation-bar-link",
                                 )}
                             >
                                 <span>{title}</span>
-                            </a>
+                            </Link>
                         );
                     })}
                 </aside>
