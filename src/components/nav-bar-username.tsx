@@ -2,11 +2,12 @@ import "@styles/username_flicker.scss";
 
 import { useLayoutEffect, useRef } from "react";
 
+import { Link } from "@tanstack/react-router";
 import { ALPHABETS } from "../lib/constants";
 import { cn } from "../lib/utils";
 
 export function RenderUsername({ styles }: { styles?: Record<string, string> }) {
-    const usernameRef = useRef<HTMLHeadingElement | null>(null);
+    const usernameRef = useRef<HTMLAnchorElement | null>(null);
 
     useLayoutEffect(function () {
         let iterations = 0;
@@ -39,7 +40,8 @@ export function RenderUsername({ styles }: { styles?: Record<string, string> }) 
     }, []);
 
     return (
-        <h1
+        <Link
+            to={"."}
             className={cn("font-bold", "username-flicker-text", styles?.className)}
             data-username="miraclemenikelechi"
             ref={usernameRef}
@@ -48,6 +50,6 @@ export function RenderUsername({ styles }: { styles?: Record<string, string> }) 
             }}
         >
             miraclemenikelechi
-        </h1>
+        </Link>
     );
 }

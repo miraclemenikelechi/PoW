@@ -1,7 +1,7 @@
 import { createRootRoute, Outlet } from "@tanstack/react-router";
 import { Fragment } from "react";
 
-import { Navbar } from "@/views/navbar";
+import { Navbar } from "@/components/navbar";
 
 export const Route = createRootRoute({
     component: RouteComponent,

@@ -9,41 +9,44 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as SkillsRouteRouteImport } from './routes/skills/route'
-import { Route as HomeRouteRouteImport } from './routes/_home/route'
+import { Route as SkillsRouteImport } from './routes/skills'
+import { Route as IndexRouteImport } from './routes/index'
 
-const SkillsRouteRoute = SkillsRouteRouteImport.update({
+const SkillsRoute = SkillsRouteImport.update({
   id: '/skills',
   path: '/skills',
   getParentRoute: () => rootRouteImport,
 } as any)
-const HomeRouteRoute = HomeRouteRouteImport.update({
-  id: '/_home',
+const IndexRoute = IndexRouteImport.update({
+  id: '/',
+  path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
 
 export interface FileRoutesByFullPath {
-  '/skills': typeof SkillsRouteRoute
+  '/': typeof IndexRoute
+  '/skills': typeof SkillsRoute
 }
 export interface FileRoutesByTo {
-  '/skills': typeof SkillsRouteRoute
+  '/': typeof IndexRoute
+  '/skills': typeof SkillsRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
-  '/_home': typeof HomeRouteRoute
-  '/skills': typeof SkillsRouteRoute
+  '/': typeof IndexRoute
+  '/skills': typeof SkillsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/skills'
+  fullPaths: '/' | '/skills'
   fileRoutesByTo: FileRoutesByTo
-  to: '/skills'
-  id: '__root__' | '/_home' | '/skills'
+  to: '/' | '/skills'
+  id: '__root__' | '/' | '/skills'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
-  HomeRouteRoute: typeof HomeRouteRoute
-  SkillsRouteRoute: typeof SkillsRouteRoute
+  IndexRoute: typeof IndexRoute
+  SkillsRoute: typeof SkillsRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -52,22 +55,22 @@ declare module '@tanstack/react-router' {
       id: '/skills'
       path: '/skills'
       fullPath: '/skills'
-      preLoaderRoute: typeof SkillsRouteRouteImport
+      preLoaderRoute: typeof SkillsRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/_home': {
-      id: '/_home'
-      path: ''
-      fullPath: ''
-      preLoaderRoute: typeof HomeRouteRouteImport
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
-  HomeRouteRoute: HomeRouteRoute,
-  SkillsRouteRoute: SkillsRouteRoute,
+  IndexRoute: IndexRoute,
+  SkillsRoute: SkillsRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
