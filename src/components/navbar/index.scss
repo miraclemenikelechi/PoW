@@ -1,0 +1,94 @@
+@use "@/assets/styles/index.scss" as *;
+
+.navigation-bar {
+    &-menu {
+        height: calc(100svh - 8.125rem);
+        backdrop-filter: blur(0.25rem);
+
+        @include flex();
+
+        > div {
+            background-color: var(--pink--200);
+        }
+    }
+
+    &-link {
+        position: relative;
+
+        &::after {
+            content: "";
+
+            border-block: 0.0625rem dotted var(--color-pink-200);
+            bottom: 15%;
+            left: 47.5%;
+            opacity: 0;
+            width: 0;
+            pointer-events: none;
+            position: absolute;
+            transform: translateX(-50%);
+            transition-duration: var(--duration);
+            transition-timing-function: ease-in-out;
+        }
+
+        span {
+            position: relative;
+            pointer-events: none;
+            @include flex;
+
+            &::after,
+            &::before {
+                position: absolute;
+                transition-duration: var(--duration);
+                transition-timing-function: ease-in-out;
+
+                @include font($f: "doto", $s: "3xl", $w: "semibold");
+                color: white;
+                opacity: 0.25;
+            }
+
+            &::after {
+                content: "]";
+                left: 100%;
+            }
+
+            &::before {
+                content: "[";
+                right: 100%;
+            }
+        }
+
+        &[data-status="active"] {
+            span {
+                color: var(--color-pink-200);
+            }
+
+            &::after {
+                bottom: 22.5%;
+                width: 110%;
+                opacity: 0.35;
+                color: white;
+            }
+        }
+
+        &:hover {
+            span::before,
+            span::after {
+                @include font($f: "doto", $s: "2xl", $w: "semibold");
+            }
+
+            span::after {
+                left: 95%;
+            }
+
+            span::before {
+                right: 95%;
+            }
+
+            &::after {
+                bottom: 22.5%;
+                width: 110%;
+                opacity: 0.5;
+            }
+        }
+    }
+}
