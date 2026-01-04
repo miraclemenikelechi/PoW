@@ -3,9 +3,9 @@ import "./index.scss";
 import { createFileRoute } from "@tanstack/react-router";
 
 import { cn } from "@/lib/utils";
-import { ProfilePic } from "../apps/landing/profile-pic";
-import { AboutText } from "../apps/landing/about-text";
 
+import { AboutText } from "../apps/landing/about-text";
+import { ProfilePic } from "../apps/landing/profile-pic";
 
 export const Route = createFileRoute("/")({
     component: RouteComponent,

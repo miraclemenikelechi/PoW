@@ -1,5 +1,6 @@
 import "./index.scss";
 
+import { Link } from "@tanstack/react-router";
 import { AnimatePresence, motion } from "motion/react";
 import { Fragment, Suspense, useState } from "react";
 
@@ -7,7 +8,6 @@ import { RenderUsername } from "@/components/nav-bar-username";
 import { MenuButton } from "@/components/nav-menu-button";
 import { cn } from "@/lib/utils";
 
-import { Link } from "@tanstack/react-router";
 import { NAVIGATION_LINKS } from "./constants";
 import { NavbarSkeleton } from "./skeleton";
 

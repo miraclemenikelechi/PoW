@@ -1,7 +1,5 @@
 import { createContext, useContext, useEffect, useState } from "react";
 
-import { BreakpointKey, BreakpointType } from "../types";
-
 export const BreakpointContext = createContext({
     mobile: 640,
     tablet: 1024,

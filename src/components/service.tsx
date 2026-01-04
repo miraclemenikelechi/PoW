@@ -2,14 +2,12 @@ import { Fragment, useState } from "react";
 
 import { SERVICES } from "@/assets/data/service";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { cn } from "@/lib/utils";
-import { Service } from "@/types";
 
 interface RenderServicesProps {
     type: "frontend" | "backend";
 }
 
-export default function Component({ type }: RenderServicesProps) {
+export function Services({ type }: RenderServicesProps) {
     const [isAccordionOpen, setIsAccordionOpen] = useState<string>("item-0");
     const services = type === "frontend" ? SERVICES.FRONTEND : SERVICES.BACKEND;
 
