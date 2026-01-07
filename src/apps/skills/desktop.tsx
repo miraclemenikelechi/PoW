@@ -3,6 +3,7 @@ import { useEffect, useRef } from "react";
 
 import { SERVICES } from "@/assets/data/service";
 import { Services } from "@/components/service";
+import { cn } from "@/lib/utils";
 
 export function SkillsDesktopView() {
     const backendIconsRef = useRef<HTMLDivElement | null>(null);

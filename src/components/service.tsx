@@ -2,6 +2,7 @@ import { Fragment, useState } from "react";
 
 import { SERVICES } from "@/assets/data/service";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { cn } from "@/lib/utils";
 
 interface RenderServicesProps {
     type: "frontend" | "backend";

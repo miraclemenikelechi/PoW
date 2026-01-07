@@ -1,7 +1,7 @@
 import "@styles/showcase.scss";
 
-import { PROJECTS } from "@/assets/data/projects";
-import ProjectReel from "@/components/project-reel";
+// import { PROJECTS } from "@/assets/data/projects";
+// import ProjectReel from "@/components/project-reel";
 import { useBreakpoint } from "@/hooks/use-breakpoint";
 import { cn } from "@/lib/utils";
 
@@ -16,9 +16,9 @@ export default function Component() {
             )}
             id="showcase"
         >
-            {PROJECTS.map(function (value, index) {
+            {/* {PROJECTS.map(function (value, index) {
                 return <ProjectReel key={index} {...value} />;
-            })}
+            })} */}
         </section>
     );
 }

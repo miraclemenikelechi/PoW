@@ -1,5 +1,3 @@
-import { iProject } from "@/types";
-
 export const PROJECTS: iProject[] = [
     {
         href: "",
