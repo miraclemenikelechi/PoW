@@ -23,7 +23,7 @@ export const SERVICES = {
             title: "creative development",
             description: `I build modern, high-performance web applications that are fast, responsive, and built
             to grow with your needs. Using frameworks like React Router, TanStack Start, NEXT, Svelte, I focus on creating seamless
-            user experiences with clean, efficient code that works flawlessly across devices. <br>
+            user experiences with clean, efficient software that works flawlessly across devices. <br>
             Every project I take on is crafted to not just solve today’s challenges but provide a
             solid foundation for the future, ensuring your digital presence stays strong as your
             business evolves. Whether it’s speed, scalability, or usability, I’m here to help turn
@@ -31,18 +31,26 @@ export const SERVICES = {
         },
         {
             title: "cross browser compatibility",
-            description: `I make sure your website looks great and works perfectly on any browser. From
-            pixel-perfect design checks to thorough testing of every feature, I focus on
+            description: `I'ts important to make sure your website looks great and works perfectly on any browser.
+            From pixel-perfect design checks to thorough testing of every feature, I focus on
             delivering a seamless experience that feels consistent and reliable, no matter how
             users access your site. On top of that, I optimize performance to keep load times fast
             and interactions smooth, making sure visitors enjoy every moment on your site. It’s
             all about building trust and keeping users engaged, so your site not only looks
-            amazing but also drives results.`,
+            amazing but also drives results.🫡`,
         },
         {
             title: "web animations",
-            description: `I use subtle hover effects, engaging button animations, and smooth transitions to
-            bring websites to life. These small but impactful details make navigation feel
+            // description: `I use subtle hover effects, engaging button animations, and smooth transitions to
+            // bring websites to life. These small but impactful details make navigation feel
+            // intuitive and enjoyable, giving users instant feedback and encouraging them to explore
+            // more. Well-designed animations don’t just look great—they guide users’ attention,
+            // highlight key actions, and boost engagement. By ensuring seamless transitions and
+            // fluid interactions, I create experiences that keep visitors on your site longer,
+            // increase conversions, and leave a lasting impression. It’s all about building a
+            // polished, professional website that feels as good as it looks.`,
+            description: `Do you notice subtle hover effects, engaging button animations, and smooth transitions that kinda
+            bring websites to life? These small but impactful details kinda make navigation feel
             intuitive and enjoyable, giving users instant feedback and encouraging them to explore
             more. Well-designed animations don’t just look great—they guide users’ attention,
             highlight key actions, and boost engagement. By ensuring seamless transitions and
