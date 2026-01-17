@@ -1,6 +1,7 @@
 import "./index.scss";
 
 import { createFileRoute } from "@tanstack/react-router";
+import { Suspense } from "react";
 
 import { AboutText } from "@/apps/landing/about-text";
 import { ProfilePic } from "@/apps/landing/profile-pic";
@@ -8,7 +9,6 @@ import { SkillsDesktopView } from "@/apps/skills/desktop";
 import { useBreakpoint } from "@/hooks/use-breakpoint";
 import { useSmoothScroll } from "@/hooks/use-smooth-scroll";
 import { cn } from "@/lib/utils";
-import { Suspense } from "react";
 
 export const Route = createFileRoute("/")({
     component: RouteComponent,
