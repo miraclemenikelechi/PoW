@@ -1,0 +1,37 @@
+@use "@/assets/styles/index.scss" as *;
+
+$element: projects;
+
+##{$element} {
+    // background-color: red;
+
+
+    article {
+        // background-color: red;
+        // display: none;
+    }
+
+
+    h3 {
+        color: var(--secondary--100);
+    }
+
+    ul {
+        flex-wrap: wrap;
+        gap: 0.25rem;
+
+        @include flex($j: flex-start, $a: center);
+    }
+
+    li {
+        color: var(--secondary--200);
+        background-color: var(--primary--200);
+
+        @include flex;
+    }
+}
+
+
+// .projects-card {
+//     display: none;
+// }
