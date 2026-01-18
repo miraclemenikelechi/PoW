@@ -1,5 +1,4 @@
 import { createRootRoute, Outlet } from "@tanstack/react-router";
-import { Fragment } from "react";
 
 import { Navbar } from "@/components/navbar";
 
@@ -9,9 +8,9 @@ export const Route = createRootRoute({
 
 function RouteComponent() {
     return (
-        <Fragment>
+        <section className="h-svh">
             <Navbar />
             <Outlet />
-        </Fragment>
+        </section>
     );
 }
