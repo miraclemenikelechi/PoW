@@ -12,7 +12,11 @@ interface iLink {
 }
 
 interface iProject extends iLink {
-    liveURL: string;
-    previewImg: string;
     stack: string[];
+    gitURL?: string;
+    // liveURL?: string;
+    // previewImg?: string;
+
+    imageSrc?: string;
+    imageAlt?: string;
 }

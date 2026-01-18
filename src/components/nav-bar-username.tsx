@@ -1,6 +1,5 @@
 import "@styles/username_flicker.scss";
 
-import { Link } from "@tanstack/react-router";
 import { useLayoutEffect, useRef } from "react";
 
 import { ALPHABETS } from "../lib/constants";
@@ -40,8 +39,7 @@ export function RenderUsername({ styles }: { styles?: Record<string, string> }) 
     }, []);
 
     return (
-        <Link
-            to={"/"}
+        <span
             className={cn("font-bold", "username-flicker-text", styles?.className)}
             data-username="miraclemenikelechi"
             ref={usernameRef}
@@ -50,6 +48,6 @@ export function RenderUsername({ styles }: { styles?: Record<string, string> }) 
             }}
         >
             miraclemenikelechi
-        </Link>
+        </span>
     );
 }

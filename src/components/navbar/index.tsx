@@ -28,7 +28,9 @@ export function Navbar() {
                 )}
                 id="navigation-bar"
             >
-                <RenderUsername />
+                <Link to="/" onClick={() => closeMenu()}>
+                    <RenderUsername />
+                </Link>
 
                 <nav className={cn("hidden gap-10", "lg:flex")}>
                     {NAVIGATION_LINKS.map(function ({ title, href }, index) {
