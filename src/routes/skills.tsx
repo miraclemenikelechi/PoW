@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { lazy, Suspense } from "react";
 
-import { SkillsSkeleton } from "@/apps/skills/skeleton";
+import { SkillsSkeleton } from "@/apps/landing/skeleton";
 import { useBreakpoint } from "@/hooks/use-breakpoint";
 import { useSmoothScroll } from "@/hooks/use-smooth-scroll";
 
