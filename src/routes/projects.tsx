@@ -16,7 +16,7 @@ function RouteComponent() {
                     return (
                         <article className="h-75 w-full" key={index}>
                             <span className="block h-3/4">
-                                <img src="https://placehold.co/600x400/0C0C0C/white" alt="" />
+                                <img src="https://placehold.co/600x400/0C0C0C/fff1f2" alt="" />
                             </span>
                             <section className="text-white">
                                 <h3>Lorem, ipsum.</h3>
