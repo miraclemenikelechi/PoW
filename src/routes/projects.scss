@@ -3,14 +3,11 @@
 $element: projects;
 
 ##{$element} {
-    // background-color: red;
-
-
     article {
-        // background-color: red;
-        // display: none;
+        // background-color: color-mix(in srgb, var(--primary--200), transparent 70%);
+        @include flex($d: column, $j: space-between);
+        padding: 0.25rem;
     }
-
 
     h3 {
         color: var(--secondary--100);
@@ -25,13 +22,14 @@ $element: projects;
 
     li {
         color: var(--secondary--200);
-        background-color: var(--primary--200);
+        background-color: var(--primary--300);
 
         @include flex;
     }
+
+    a {
+        @include flex($type: inline);
+        @include equal($h-w: 5rem);
+        color: var(--secondary--200);
+    }
 }
-
-
-// .projects-card {
-//     display: none;
-// }

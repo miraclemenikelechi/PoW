@@ -22,7 +22,7 @@ export function Navbar() {
         <Suspense fallback={<NavbarSkeleton />}>
             <header
                 className={cn(
-                    "font-doto sticky top-0 mx-auto flex max-w-7xl items-center justify-between p-5",
+                    "font-doto sticky top-0 z-10 mx-auto flex max-w-7xl items-center justify-between p-5",
                     "lg:p-10",
                     `navigation-bar--${isOpen ? "open" : "close"}`,
                 )}
@@ -58,7 +58,7 @@ export function Navbar() {
                         initial={{ scale: 1, opacity: 0 }}
                         animate={{ scale: 1, opacity: 1 }}
                         exit={{ scale: 1, opacity: 0 }}
-                        className={cn("fixed size-full", "navigation-bar-menu")}
+                        className={cn("fixed z-10 size-full", "navigation-bar-menu")}
                     >
                         <nav className={cn("flex h-full w-[95%] flex-col items-end space-y-6 rounded-xl p-5")}>
                             {NAVIGATION_LINKS.map(({ title, href }, index) => (

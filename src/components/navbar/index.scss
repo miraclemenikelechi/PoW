@@ -88,6 +88,7 @@ $element: navigation-bar;
         }
 
         &:hover {
+
             span::before,
             span::after {
                 @include font($f: "doto", $s: "2xl", $w: "semibold");
