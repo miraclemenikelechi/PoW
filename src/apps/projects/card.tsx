@@ -20,10 +20,10 @@ export function ProjectCard({ imageSrc, imageAlt, title, stack, href, gitURL }: 
 
                 <div
                     className={cn(
-                        "absolute inset-0 flex w-full items-center justify-center",
+                        "pointer-events-none absolute inset-0 flex w-full items-center justify-center",
                         "bg-black/60 opacity-0 transition-opacity duration-150",
-                        "group-hover:opacity-100",
-                        "group-focus-within:opacity-100",
+                        "group-hover:opacity-100 group-hover:pointer-events-auto",
+                        "group-focus-within:opacity-100 group-focus-within:pointer-events-auto",
                     )}
                 >
                     <a href={gitURL} target="_blank">
