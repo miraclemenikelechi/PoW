@@ -12,7 +12,7 @@ import { NAVIGATION_LINKS } from "./constants";
 import { NavbarSkeleton } from "./skeleton";
 
 export function Navbar() {
-    const MotionLinkButton = motion(Link);
+    const MotionLinkButton = motion.create(Link);
     const [isOpen, setIsOpen] = useState<boolean>(false);
 
     const toggleMenu = () => setIsOpen((previous) => !previous);
