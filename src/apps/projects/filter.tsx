@@ -1,6 +1,8 @@
+import { useState } from "react";
+
 import { Dropdown } from "@/components/dropdown";
 import { Route } from "@/routes/projects";
-import { useState } from "react";
+
 import { FILTERS_OPTIONS } from "./constants";
 
 type FilterValue = ProjectCategoryFilter | "all";

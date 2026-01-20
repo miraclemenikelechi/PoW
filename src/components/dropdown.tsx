@@ -2,6 +2,7 @@ import { AnimatePresence, easeIn, easeOut, motion } from "motion/react";
 import { ReactNode, useEffect, useRef, useState } from "react";
 
 import { cn } from "@/lib/utils";
+
 import { Button } from "./ui/button";
 
 type DropdownButton<T extends string> = {
@@ -27,14 +28,12 @@ export function Dropdown<T extends string>({ onChange, options, styles, value }:
             opacity: 1,
             transition: {
                 staggerChildren: 0.05,
-                // staggerDirection: 1,
             },
         },
         closed: {
             opacity: 0,
             transition: {
                 staggerChildren: 0.1,
-                // staggerDirection: 0,
             },
         },
     };
