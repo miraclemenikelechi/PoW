@@ -8,7 +8,7 @@ interface RenderServicesProps {
     type: "frontend" | "backend";
 }
 
-export function Services({ type }: RenderServicesProps) {
+export function Service({ type }: RenderServicesProps) {
     const [isAccordionOpen, setIsAccordionOpen] = useState<string>("item-0");
     const services = type === "frontend" ? SERVICES.FRONTEND : SERVICES.BACKEND;
 

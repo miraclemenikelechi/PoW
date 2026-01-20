@@ -2,7 +2,7 @@ import gsap from "gsap";
 import { useEffect, useRef } from "react";
 
 import { SERVICES } from "@/assets/data/service";
-import { Services } from "@/components/service";
+import { Service } from "@/components/service";
 import { cn } from "@/lib/utils";
 
 export function LandingDesktopView() {
@@ -117,11 +117,11 @@ export function LandingDesktopView() {
 
                     <aside className="max-h-max space-y-40 p-10">
                         <article ref={frontendRef}>
-                            <Services type="frontend" />
+                            <Service type="frontend" />
                         </article>
 
                         <article ref={backendRef}>
-                            <Services type="backend" />
+                            <Service type="backend" />
                         </article>
                     </aside>
                 </main>

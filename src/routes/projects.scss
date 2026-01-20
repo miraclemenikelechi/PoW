@@ -4,7 +4,9 @@ $element: projects;
 
 ##{$element} {
     article {
-        padding: 0.25rem;
+        outline-color: var(--primary--200);
+        gap: 0.5rem;
+
         @include flex($d: column, $j: space-between);
     }
 
