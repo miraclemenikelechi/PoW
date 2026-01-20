@@ -1,6 +1,8 @@
 type BreakpointKey = "mobile" | "tablet";
 type BreakpointType = "min" | "max";
 
+type ProjectCategoryFilter = "frontend" | "backend" | "template";
+
 interface Service {
     title: string;
     description: string;
@@ -12,11 +14,9 @@ interface iLink {
 }
 
 interface iProject extends iLink {
-    stack: string[];
+    category: string[];
     gitURL?: string;
-    // liveURL?: string;
-    // previewImg?: string;
-
-    imageSrc?: string;
     imageAlt?: string;
+    imageSrc?: string;
+    tech: string[];
 }

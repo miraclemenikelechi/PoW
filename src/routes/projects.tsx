@@ -12,10 +12,22 @@ import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/projects")({
     component: RouteComponent,
+    validateSearch: (search: { filter: ProjectCategoryFilter }) => ({
+        filter:
+            search.filter === "frontend" || search.filter === "backend" || search.filter === "template"
+                ? search.filter
+                : undefined,
+    }),
 });
 
 function RouteComponent() {
     const isTablet = useBreakpoint({ bp: "tablet", type: "min" });
+    const { filter } = Route.useSearch();
+
+    const filteredProjects = PROJECTS.filter(function (project: iProject) {
+        if (!filter) return true;
+        return project.category.includes(filter);
+    });
 
     return (
         <Suspense fallback={<ProjectsSkeleton />}>
@@ -25,7 +37,7 @@ function RouteComponent() {
                 <section
                     className={cn("mx-auto grid max-w-7xl flex-1 gap-8", isTablet ? "grid-cols-3" : "grid-cols-1")}
                 >
-                    {PROJECTS.map((project: iProject, index: number) => (
+                    {filteredProjects.map((project: iProject, index: number) => (
                         <ProjectCard key={index} {...project} />
                     ))}
                 </section>

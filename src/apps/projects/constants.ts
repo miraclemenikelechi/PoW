@@ -19,3 +19,10 @@ export const PROJECT_CARDS_VARIANT: Variants = {
         },
     },
 };
+
+export const FILTERS = ["all", "frontend", "backend", "template"] as const;
+
+export const FILTERS_OPTIONS = FILTERS.map((filter) => ({
+    value: filter,
+    title: filter.charAt(0).toUpperCase() + filter.slice(1),
+}));

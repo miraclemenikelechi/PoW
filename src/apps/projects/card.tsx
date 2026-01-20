@@ -2,7 +2,7 @@ import { FileCodeCorner, SquareArrowOutUpRight } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 
-export function ProjectCard({ imageSrc, imageAlt, title, stack, href, gitURL }: iProject) {
+export function ProjectCard({ imageSrc, imageAlt, title, href, gitURL, tech }: iProject) {
     return (
         <article
             tabIndex={0}
@@ -47,7 +47,7 @@ export function ProjectCard({ imageSrc, imageAlt, title, stack, href, gitURL }: 
                 <h3>{title}</h3>
 
                 <ul className="flex">
-                    {[...stack].sort().map((value: string, index: number) => (
+                    {[...tech].sort().map((value: string, index: number) => (
                         <li key={index} className="rounded-full px-3 py-1">
                             <span className="text-xs">{value}</span>
                         </li>
