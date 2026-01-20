@@ -19,10 +19,12 @@ function RouteComponent() {
 
     return (
         <Suspense fallback={<ProjectsSkeleton />}>
-            <main className={cn("mx-auto my-4 px-5")} id="projects">
+            <main className={cn("my-4 px-5")} id="projects">
                 <ProjectFilter />
 
-                <section className={cn("grid max-w-7xl flex-1 gap-8", "lg:grid-cols-3")}>
+                <section
+                    className={cn("mx-auto grid max-w-7xl flex-1 gap-8", isTablet ? "grid-cols-3" : "grid-cols-1")}
+                >
                     {PROJECTS.map((project: iProject, index: number) => (
                         <ProjectCard key={index} {...project} />
                     ))}
